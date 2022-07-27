@@ -21,14 +21,15 @@ isWebp();
 
 
 let listSection = document.querySelectorAll(".list__section-btn");
-let openList = document.querySelector(".open__list")
+let openList = document.querySelector(".open__list");
 
 
 listSection.forEach(item=>{
 	item.addEventListener("click", ()=>{
-		item.nextElementSibling.classList.toggle("active__list")
-	})
-})
+		item.nextElementSibling.classList.toggle("active__list");
+		item.children[1].classList.toggle("btnTrans");
+	});
+});
 
 
 let allItemList = document.querySelectorAll(".open__list-item");
@@ -36,6 +37,20 @@ let allItemList = document.querySelectorAll(".open__list-item");
 
 allItemList.forEach(item=>{
 	item.addEventListener("click", ()=>{
-		item.parentElement.classList.remove("active__list")
-	})
+		item.parentElement.classList.remove("active__list");
+		item.parentElement.parentElement.querySelector(".list__section-ico").classList.remove("btnTrans");
+	});
+});
+
+
+
+let burgerContent = document.querySelector(".open__burger");
+let burgerBtn = document.querySelector(".header__burger");
+
+
+
+
+burgerBtn.addEventListener("click", ()=>{
+	burgerContent.classList.toggle("open__burger-active");
+	burgerBtn.classList.toggle("header__burger-close");
 })

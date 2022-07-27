@@ -5,7 +5,7 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ART KANTE</title>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220727141733">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220727183437">
 </head>
 <body>
 <div class="content">
@@ -20,7 +20,7 @@
 				<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.jpg" alt="header_logo"></picture>
 			</div>
 			<nav class="header__nav">
-				<div class="header__nav-fist nav__first">
+				<div data-da=".open__burger,800,1" class="header__nav-fist nav__first">
 
 					<ul class="nav__first-list">
 						<li><a href="https://www.google.com/">Философия</a></li>
@@ -31,13 +31,13 @@
 						
 					</ul>	
 
-					<tel class="nav__first-icon">
+					<tel data-da=".header__adaptive,1120,1" class="nav__first-icon">
 						<div class="nav__first-icon__btn"><a href="https://www.google.com/">Избранное</a></div>
-						<img src="img/header_tel.svg" alt="tel">
+						<a href="https://www.google.com/"><img src="img/header_tel.svg" alt="tel"></a>
 					</tel>	
 
 				</div>
-				<div class="header__nav-second header__second">
+				<div data-da=".open__burger,1120,0" class="header__nav-second header__second">
 				<div class="header__second-list second-list">
 					<section class="second-list_section list__section">
 						<div class="list__section-btn">
@@ -108,14 +108,21 @@
 
 
 
-				<div class="header__second-icon">
+				<div data-da=".header__adaptive,1120,0" class="header__second-icon">
 					<a href="https://www.google.com/"><img src="img/header__inst.svg" alt="inst"></a>
 					
 				</div>
 				
 				</div>
+				<div class="header__adaptive">
+					<a class="nav__tel" href="#"><img  src="img/nav__tel2.svg" alt="tel"></a>
+				</div>
+				
 			</nav>
-			<div class="header__burger"><span class="line">1</span><span class="line2">2</span></div>
+				<div class="header__burger"><span class="line"></span><span class="line2"></span></div>	
+	
+			
+			<div class="open__burger"></div>
 		</div>
 	</div>
 </header>
@@ -132,6 +139,7 @@
 <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.jpg" alt=""></picture>
 </div>
 </div>
-<script src="js/app.js?_v=20220727141733"></script>
+<script src="js/app.js?_v=20220727183437"></script>
+<script src="js/dynamicAdapt.js?_v=20220727183437"></script>
 </body>
 </html>
