@@ -20,37 +20,33 @@ isWebp();
 
 
 
-let listSection = document.querySelectorAll(".list__section-btn");
-let openList = document.querySelector(".open__list");
+const btnBurger = document.querySelector(".header__burger");
+const burger = document.querySelector(".burger__open");
+const burgerClose = document.querySelector(".close__burger");
+
+burgerClose.addEventListener("click", ()=>{
+	burger.classList.remove("burger__open-active");
+})
 
 
-listSection.forEach(item=>{
-	item.addEventListener("click", ()=>{
-		item.nextElementSibling.classList.toggle("active__list");
-		item.children[1].classList.toggle("btnTrans");
-	});
-});
 
-
-let allItemList = document.querySelectorAll(".open__list-item");
-
-
-allItemList.forEach(item=>{
-	item.addEventListener("click", ()=>{
-		item.parentElement.classList.remove("active__list");
-		item.parentElement.parentElement.querySelector(".list__section-ico").classList.remove("btnTrans");
-	});
+btnBurger.addEventListener("click", item =>{
+		btnBurger.classList.toggle("header__burger_close");
 });
 
 
 
-let burgerContent = document.querySelector(".open__burger");
-let burgerBtn = document.querySelector(".header__burger");
+btnBurger.addEventListener("click", ()=>{
+		burger.classList.toggle("burger__open-active");
+		btnBurger.classList.remove("header__burger_close");
+});
 
 
 
-
-burgerBtn.addEventListener("click", ()=>{
-	burgerContent.classList.toggle("open__burger-active");
-	burgerBtn.classList.toggle("header__burger-close");
+window.addEventListener("scroll", ()=>{
+	if(scrollY>30){
+		document.querySelector("header").classList.add("headerScroll");
+	}else{
+		document.querySelector("header").classList.remove("headerScroll");
+	}
 })
