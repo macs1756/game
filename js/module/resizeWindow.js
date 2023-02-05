@@ -10,9 +10,13 @@ const resizeWindow = () =>{
 
 		document.querySelector(".game-off").classList.add('active');
 
+		document.querySelector(".game-on").classList.add('active');
+
 	}else{
 
 		document.querySelector(".game-off").classList.remove('active');
+		
+		document.querySelector(".game-on").classList.remove('active');
 
 	}
 }

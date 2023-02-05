@@ -10,7 +10,7 @@ body {
 main {
 	border: 1px solid red;
 	position: relative;
-	min-height: 100vh;
+	min-height: 90vh;
 }
 
 .game-off{
@@ -38,4 +38,13 @@ animation: screenRotate 2s linear 1 normal 0s forwards;
 	100%{
 		transform: rotate(90deg);
 	}
+}
+
+
+.game-on.active{
+	display: none;
+}
+
+.game-on{
+	display: block;
 }
