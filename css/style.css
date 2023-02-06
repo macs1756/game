@@ -12,6 +12,7 @@ main {
   min-height: 90vh;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 img {
@@ -67,6 +68,8 @@ img {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(17, 1fr);
+  background: url("../img/bg-game.png") 100% 100%;
+  background-size: cover;
 }
 
 .game-grid-item {
@@ -74,4 +77,13 @@ img {
   min-width: 30px;
   min-height: 30px;
   height: 100%;
+}
+
+.gameplay {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-radius: 50%;
 }
