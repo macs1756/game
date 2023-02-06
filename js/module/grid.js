@@ -1,8 +1,15 @@
 
 const grid = () =>{
 
-		const firstGrid = document.querySelector(".m-1");
 
+
+	window.addEventListener("resize" , ()=>{
+		replaceHeight();
+	});
+		
+
+	function replaceHeight(){
+		const firstGrid = document.querySelector(".m-1");
 		const itemGrid = document.querySelectorAll(".game-grid-item");
 
 		if(itemGrid.length > 0 ){
@@ -10,9 +17,11 @@ const grid = () =>{
 			itemGrid.forEach(item=>{
 				item.style.height = firstGrid.offsetWidth+"px";
 				
-			})
+			});
 		}
+	}
 
+	replaceHeight();
 		
 }
 
