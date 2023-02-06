@@ -11,6 +11,8 @@ main {
 	border: 1px solid red;
 	position: relative;
 	min-height: 90vh;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .game-off{
@@ -47,4 +49,18 @@ animation: screenRotate 2s linear 1 normal 0s forwards;
 
 .game-on{
 	display: block;
+}
+
+
+.game-grid{
+	display: grid;
+	grid-template-columns: repeat(16,1fr);
+}
+
+.game-grid-item{
+	border: 1px solid #000;
+	min-width: 30px;
+	min-height: 30px;
+	height: 100%;
+
 }
